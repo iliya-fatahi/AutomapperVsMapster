@@ -31,7 +31,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-var summary = BenchmarkRunner.Run<FetchPhotoBenchmarker>();
-Console.WriteLine(summary);
+BenchmarkRunner.Run<FetchPhotoBenchmarker>();
 
 app.Run();

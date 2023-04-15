@@ -56,4 +56,10 @@ public class FetchPhotoBenchmarker
         var deserializeContent = JsonConvert.DeserializeObject<List<T>>(await content.Content.ReadAsStringAsync());
         return deserializeContent;
     }
+
+    [GlobalCleanup]
+    public void GlobalCleanup()
+    {
+        Console.WriteLine("Benchmark is cleaning up .");
+    }
 }
